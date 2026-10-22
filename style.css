@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/*Resete Global*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Cor cinza claro oficial do template */
+    background-color: #f1f1f1;
+    color: #333333;
+    line-height: 1.5;
+}
+
+/*Contêiner Principal*/
+
+.cv-container {
+    /*impede que o cv fique esticado em telas muito grandes*/
+    max-width: 1500px;
+    /*20px no topo/base e 'auto' para centralizar horizontalmente*/
+    margin: 40px auto;
+    padding: 0 16px;
+    padding-right: 0 16px;
+    /*Configuração Flexbox*/
+    display: flex;
+    gap: 20px;
+    /*Espaçamento exato entre a coluna direita e esquerda*/
+}
+
+/*Divisão proporcionais das colunas*/
+
+.coluna-esquerda {
+    flex: 1; /*ocupa uma parte do espaço disponível (~33%)*/
+}
+
+.coluna-direita {
+    flex: 2; /*ocupa duas partes do espaço disponível (~66%)*/
+}
+
+.card {
+    /*Fundo Branco dos cards*/
+    background-color: #ffffff;
+    margin-bottom: 16px;
+    padding: 3px; /* O padding interno será gerenciado pelas subseções para um alinhamento perfeito*/
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12); /*Efeito de elevação visual (sombra suave do w3-card)*/
+}
+
+.site-footer {
+    background-color: #009688;
+    color: #ffffff;
+    text-align: center;
+    padding: 32px 16px;
+    margin-top: 16px;
+}
+
+.site-footer p {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+/*Contêiner de ícones para controle de espaçamento*/
+
+.social-icons a {
+    color: #ffffff; /*Mantém os ícones brancos*/
+    font-size: 24px; /*Define o tamanho dos ícones*/
+    margin: 0 4px; /*Separação horizontal entre um ícone e outro*/
+    text-decoration: none; /*Remove qualquer sublinhado dos links*/
+    display: inline-block; /*Garante que transformações e dimensões funcionem corretamente*/
+    opacity: 1; /*Opacidade inicial padrão (100% visível)*/
+    transition: opacity 0.3s ease; /*Transição suave de 0.3 segundos para o efeito hover*/
+}
+
+.social-icons a:hover {
+    opacity: 0.6;
+}
+
+/*Título principal h2 da seção*/
+
+.card-header {
+    padding: 16px 30px;
+    color: #757575; /*Tom suave e elegante para título*/
+    font-size: 24px;
+    font-weight: 400; /*Peso de fonte normal/leve*/
+    display: flex;
+    align-items: center; /*Alinha o ícone perfeitamente ao centro do texto na vertical*/
+}
+
+/*Ícone do título*/
+
+.card-header .icon-titulo {
+    color: #009688; /*Cor temática*/
+    font-size: 30px; /*Ícone maior para destaque*/
+    margin-right: 16px; /*Separação horizontal entre o ícone e o texto*/
+}
+
+/*Padding interno do contêiner de itens*/ 
+.card-content 
+{
+    padding: 0 16px 16px 16px;  /*0 é o topo, 16px direita, 16px base, 16px esquerda*/
+
+}
+
+/*Cargo e empresa*/
+
+.cargo-empresa {
+    color: #616161;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/*Período e atuação*/
+
+.periodo {
+    color: #009688;
+    font-size: 14px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center; /*Alinha ícone, texto e badge verticalmente*/
+}
+
+/*Ícone de calendário*/
+
+.icon-periodo {
+    margin-right: 12px; /*Distância entre o ícone do calendário e a data*/
+    font-size: 16px;
+}
+
+/*Selo atual (tag/badge)*/
+
+.badge-tag {
+    background-color: #009688; /*Fundo verde teal*/
+    color: #ffffff; /*Texto em branco para contraste*/
+    padding: 2px 8px; /*Espaçamento interno 2px topo/base, 8px laterais*/
+    border-radius: 4px; /*Cantos levemente arredondados*/
+    font-size: 12px; /*Fonte menor para caracterizar uma tag*/
+    margin-left: 8px; /*Afasta a tag do texto "jan 2015"*/
+}
+
+/*Linha divisória customizada*/
+
+.divisor {
+    border: 0; /*Remove a borda padrão do navegador*/
+    height: 1px; /*Espessura da linha*/
+    background-color: #eee; /*Cor cinza ultra claro para uma separação discreta*/
+    margin: 16px 0; /*Espaçamento vertical acima e abaixo da linha*/
+}
+
+/*container que segura a imagem e serve de apoio para o nome*/
+
+.avatar-container {
+    position: relative; /* define o container como referência de coordenada*/
+    width: 100%;
+}
+
+/*imagem ajustada para ocupar toda a largura do cartão*/
+
+.avatar-img {
+    width: 100%;
+    display: block; /*elimina pequenos espaços vazios abaixo da tag img*/
+}
+
+/*bloco do nome sobreposto no canto inferior esquerdo*/
+
+.avatar-nome {
+    position: absolute; /*desloca o elemento e posiciona sobre a foto*/
+    bottom: 16px; /* distância da base da foto*/
+    left: 16px; /*distância a partir da lateral esquerda da foto*/
+    color: #504f4f; /*cor do nome conforme o template original*/
+}
+
+.avatar-nome h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/*espaçamento e cor da linha de informação*/
+
+.perfil-info p {
+    color: #757575;
+    font-size: 14px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    padding: 6px
+}
+
+/*estilo padronizado dos ícones de contato*/
+
+.icon-contato {
+    color: #009688;
+    font-size: 20px;
+    width: 30px; /* largura fixa para garantir que os textos comecem no mesmo alinhamento*/
+    text-align: center;
+    margin-right: 8px;
+}
+
+.perfil-section {
+    padding: 5px 30px;
+}
+
+/*subtítulo da sidebar (skills e Languages)*/
+
+.subtitulo-perfil {
+    color: #757575;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+}
+
+/*Rótulo da habilidade idioma*/
+
+.skill-label {
+    color: #757575;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+/*trilho da barra de progresso (fundo cinza arredondado)*/
+
+.progress-bar-bg {
+    background-color: #f1f1f1;
+    border-radius: 16px; /*Formato cilíndrico/pílula arredondado*/
+    height: 18px; /*altura da barra*/
+    margin-bottom: 16px;
+    overflow: hidden; /* garante que o preenchimento interno siga a curva dos cantos*/
+}
+
+/*preenchimento ativo da barra (verde)*/
+
+.progress-bar-fill {
+    background-color: #009688;
+    height: 100%;
+    border-radius: 16px;
+    color: #ffffff; /*texto em branco dentro da barra*/
+    font-size: 12px;
+    line-height: 18px; /*centraliza o texto verticalmente igual a altura do container*/
+    text-align: center; /* centraliza o texto horizontalmente*/
+}
+
+@media (max-width: 600px) {
+    /*altera a direção do flexbox para coluna em telas pequenas*/
+
+    .cv-container {
+        flex-direction: column;
+        padding: 0 8px;
+    }
+
+    /*as duas colunas passam a ocupar 100% da largura da tela*/
+
+    .coluna-esquerda,
+    .coluna-direita {
+        width: 100%;
+    }
+}
